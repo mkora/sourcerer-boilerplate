@@ -14,7 +14,7 @@ A boilerplate for Node.js / Express backend applications
 
 - Loads environment variables from `.env` file
 
-- Uses `error-handler` in development mode
+- Uses `error-handler`
 
 - Controllers should be added to `controllers` folder
 
@@ -41,22 +41,22 @@ A boilerplate for Node.js / Express backend applications
 
   - Boot from the top-level directory
 
-    ```
-    $ PORT=3030 LOG_LEVEL=debug npm start
-    ```
+  ```
+  PORT=3030 LOG_LEVEL=debug npm start
+  ```
 
   - Dev server (uses nodemon):
 
-    ```
-    $ PORT=3030 LOG_LEVEL=debug npm run devstart
-    ```
+  ```
+  PORT=3030 LOG_LEVEL=debug npm run devstart
+  ```
 
   - Browse at http://localhost:3030
 
 3. Run tests
 
   ```
-  $ npm test
+  npm test
   ```
 
 ## API Endpoints
