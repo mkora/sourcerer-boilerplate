@@ -59,7 +59,11 @@ mongoose.connection.on('error', (err) => {
 app.get('/pulse', (req, res) => {
   logger.debug('It works!');
   res.status(200);
-  res.send('It works!');
+  // send json
+  return res.json({
+    ok: true,
+    data: 'It works!',
+  });
 });
 
 /**
@@ -70,6 +74,18 @@ app.get('/api/index', indexController.index);
 /**
  * Error Handler
  */
-app.use(errorHandler());
+app.use((req, res, next) => {
+  const err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+
+app.use(errorHandler({
+  log: (err, str, req, res) => {
+    logger.error(str, err, req);
+    res.status(err.code || 500);
+  },
+}));
 
 module.exports = app;
