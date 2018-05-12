@@ -31,7 +31,7 @@ A boilerplate for Node.js / Express backend applications
   git clone git@github.com:mkora/sourcerer-boilerplate.git
   cd sourcerer-boilerplate
 
-  rm -rf .git && git init && npm init
+  rm -rf .git && git init && npm i
   
   # Install dependencies
   npm i
