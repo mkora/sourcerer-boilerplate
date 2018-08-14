@@ -42,13 +42,13 @@ A boilerplate for Node.js / Express backend applications
   - Boot from the top-level directory
 
   ```
-  PORT=3030 LOG_LEVEL=debug npm start
+  npm start
   ```
 
   - Dev server (uses nodemon):
 
   ```
-  PORT=3030 LOG_LEVEL=debug npm run devstart
+  npm run devstart
   ```
 
   - Browse at http://localhost:3030
